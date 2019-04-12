@@ -1,9 +1,63 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Two
+      Add Movie
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+<ion-item>
+  <ion-input placeholder="Movie Name" [(ngModel)]="movie.name"></ion-input>
+</ion-item>
+<ion-item>
+    <ion-input placeholder="Movie year" [(ngModel)]="movie.year"></ion-input>
+</ion-item>
+<ion-item>
+    <ion-input placeholder="Movie Image" [(ngModel)]="movie.image_url"></ion-input>
+</ion-item>
+<ion-item>
+    <ion-input placeholder="Movie Production"></ion-input>
+    <ion-select value="brown" okText="Okay" cancelText="Dismiss" [(ngModel)]="movie.production_house">
+      <ion-select-option value="abc">ABC</ion-select-option>
+      <ion-select-option value="bcd">BCD</ion-select-option>
+      <ion-select-option value="efg">EFG</ion-select-option>
+      <ion-select-option value="hij">HIJ</ion-select-option>
+    </ion-select>
+</ion-item>
+<ion-item>
+    <ion-input placeholder="Movie Rating"></ion-input>
+    <ion-select value="brown" okText="Okay" cancelText="Dismiss" [(ngModel)]="movie.rating">
+        <ion-select-option value="1">1</ion-select-option>
+        <ion-select-option value="2">2</ion-select-option>
+        <ion-select-option value="3">3</ion-select-option>
+        <ion-select-option value="4">4</ion-select-option>
+        <ion-select-option value="5">5</ion-select-option>
+      </ion-select>
+</ion-item>
+<ion-item>
+    <ion-input placeholder="Movie Type" ></ion-input>
+    <ion-select value="brown" okText="Okay" cancelText="Dismiss" [(ngModel)]="movie.type">
+        <ion-select-option value="family">Family</ion-select-option>
+        <ion-select-option value="epic">Epic</ion-select-option>
+        <ion-select-option value="horror">Horror</ion-select-option>
+        <ion-select-option value="drama">Drama</ion-select-option>
+      </ion-select>
+</ion-item>
+<ion-item>
+    <ion-input placeholder="Movie Language" ></ion-input>
+    <ion-select value="brown" okText="Okay" cancelText="Dismiss" [(ngModel)]="movie.language">
+        <ion-select-option value="Kannada">Kannada</ion-select-option>
+        <ion-select-option value="English">English</ion-select-option>
+        <ion-select-option value="Hindi">Hindi</ion-select-option>
+        <ion-select-option value="Telugu">Telugu</ion-select-option>
+        <ion-select-option value="Tamil">Tamil</ion-select-option>
+        <ion-select-option value="Malayalam">Malayalam </ion-select-option>
+    </ion-select>
+</ion-item>
+<ion-item>
+    <ion-input placeholder="Movie Date" [(ngModel)]="movie.date"></ion-input>
+    <!-- <ion-datetime display-format="YY/MM/DD" picker-format="YYYY-MMMM-DDDD" ></ion-datetime> -->
+</ion-item>
+<ion-button (click)="addMovie(movie)">Add Movie</ion-button>
+</ion-content>
